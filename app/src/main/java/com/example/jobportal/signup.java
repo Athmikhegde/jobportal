@@ -74,7 +74,7 @@ public class signup extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                       if(task.isSuccessful()){
                           Toast.makeText(signup.this, "Account Created", Toast.LENGTH_SHORT).show();
-                          startActivity(new Intent(getApplicationContext(),homeactivity.class));
+                          startActivity(new Intent(getApplicationContext(),loginpage.class));
                       }else{
                           Toast.makeText(signup.this, "Error!!!"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                           progress.setVisibility(View.GONE);
