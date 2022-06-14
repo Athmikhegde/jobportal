@@ -21,7 +21,7 @@ public class UserselectionActivity extends AppCompatActivity {
         seeker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(UserselectionActivity.this,loginpage.class);
+                Intent intent=new Intent(UserselectionActivity.this,homeactivity.class);
                 startActivity(intent);
             }
         });
