@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Jobportal">
         <activity
-            android:name=".UserselectionActivity"
+            android:name=".profileMain"
             android:exported="false" />
         <activity
-            android:name=".homeactivity"
+            android:name=".homeMain"
+            android:exported="false" />
+        <activity
+            android:name=".UserselectionActivity"
             android:exported="false" />
         <activity
             android:name=".signup"

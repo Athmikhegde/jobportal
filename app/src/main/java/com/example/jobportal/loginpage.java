@@ -67,6 +67,7 @@ public class loginpage extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String email=nEmail.getText().toString().trim();
                 String password=nPassword.getText().toString().trim();
                 if(TextUtils.isEmpty(password)){
@@ -86,6 +87,7 @@ public class loginpage extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(loginpage.this, "Login successfull", Toast.LENGTH_SHORT).show();
+                            finish();
                             startActivity(new Intent(getApplicationContext(),UserselectionActivity.class));
                         }else {
                             Toast.makeText(loginpage.this, "Wrong Details!!!"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -93,7 +95,9 @@ public class loginpage extends AppCompatActivity {
                         }
                     }
                 });
+
             }
+
         });
 
         signup = findViewById(R.id.signupbtn2);
