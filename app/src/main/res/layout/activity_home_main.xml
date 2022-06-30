@@ -6,23 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".home">
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="272dp"
-        android:text="homemm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".homeMain">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottomnav"
-        android:layout_width="407dp"
-        android:layout_height="68dp"
+        android:layout_width="411dp"
+        android:layout_height="58dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,24 +20,24 @@
 
         <ImageButton
             android:id="@+id/homebtn"
-            android:layout_width="121dp"
-            android:layout_height="78dp"
+            android:layout_width="110dp"
+            android:layout_height="58dp"
             android:background="#ffffff"
             android:src="@mipmap/ic_launcher_homeicon_foreground"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/profilebtn"
-            android:layout_width="121dp"
-            android:layout_height="78dp"
+            android:layout_width="110dp"
+            android:layout_height="58dp"
             android:background="#ffffff"
             android:src="@mipmap/ic_launcher_profileicon_foreground"
             app:layout_constraintEnd_toStartOf="@+id/logoutbtn"
-            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintHorizontal_bias="0.54"
             app:layout_constraintStart_toEndOf="@+id/homebtn"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck"
@@ -56,29 +45,81 @@
 
         <ImageButton
             android:id="@+id/logoutbtn"
-            android:layout_width="121dp"
-            android:layout_height="78dp"
+            android:layout_width="110dp"
+            android:layout_height="58dp"
             android:background="#ffffff"
             android:contentDescription="TODO"
             android:src="@mipmap/ic_launcher_logouticon_foreground"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toEndOf="@+id/homebtn"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck"
             tools:src="@mipmap/ic_launcher_logouticon_foreground" />
 
         <View
-            android:id="@+id/divider2"
-            android:layout_width="wrap_content"
-            android:layout_height="4dp"
-            android:layout_marginStart="3dp"
-            android:background="@color/projblue"
-            android:backgroundTint="#006DFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/divider12"
+            android:layout_width="6dp"
+            android:layout_height="58dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logoutbtn"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toEndOf="@+id/profilebtn"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <View
+            android:id="@+id/divider11"
+            android:layout_width="6dp"
+            android:layout_height="58dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/profilebtn"
+            app:layout_constraintStart_toEndOf="@+id/homebtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider10"
+        android:layout_width="409dp"
+        android:layout_height="6dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerid"
+        android:layout_width="411dp"
+        android:layout_height="610dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="414dp"
+        android:layout_height="99dp"
+        android:background="#006DFF"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya_sans_black"
+            android:text="JOB PORTAL"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

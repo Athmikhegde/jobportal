@@ -10,12 +10,22 @@
         <entry key="..\:/Users/User/Desktop/web lab/jobportal/app/src/main/res/layout/activity_recruiterlogin.xml" value="0.25" />
         <entry key="..\:/Users/User/Desktop/web lab/jobportal/app/src/main/res/layout/activity_signup.xml" value="0.25" />
         <entry key="..\:/Users/User/Desktop/web lab/jobportal/app/src/main/res/layout/userselection.xml" value="0.264" />
-        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_home_main.xml" value="0.2359375" />
-        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_homeactivity.xml" value="0.264" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/drawable/circlebtn.xml" value="0.2545" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_fillprofile.xml" value="0.2" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_hirer_main.xml" value="0.264" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_home_main.xml" value="0.176" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_homeactivity.xml" value="0.176" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_login.xml" value="0.12107396149949341" />
         <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_loginpage.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_profile_main.xml" value="0.2359375" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_mainprofile.xml" value="0.264" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_postjob.xml" value="0.2" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_profile_main.xml" value="0.152" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/activity_signup.xml" value="0.2" />
         <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/fragment_home_frag.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/fragment_profile_frag.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/layout/post_job_item.xml" value="0.4" />
         <entry key="..\:/Users/User/StudioProjects/jobportal/app/src/main/res/menu/bottom_menu.xml" value="0.24895833333333334" />
         <entry key="..\:/jobportal/app/src/main/res/layout/activity_homeactivity.xml" value="0.33" />
         <entry key="..\:/jobportal/app/src/main/res/layout/activity_login.xml" value="0.32916666666666666" />
