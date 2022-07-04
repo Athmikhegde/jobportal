@@ -24,7 +24,7 @@ public class homeMain extends AppCompatActivity {
     //firebase
     private FirebaseAuth mauth;
     private DatabaseReference mdatabase;
-    private PostAdapter adapter;
+    private homeadapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +45,7 @@ public class homeMain extends AppCompatActivity {
         String uId = mUser.getUid();
         FirebaseRecyclerOptions<Data> options = new FirebaseRecyclerOptions.Builder<Data>().setQuery(FirebaseDatabase.getInstance().getReference().child("public data"), Data.class).build();
 
-        adapter = new PostAdapter(options);
+        adapter = new homeadapter(options);
         recyclerView.setAdapter(adapter);
 
         profile.setOnClickListener(new View.OnClickListener() {

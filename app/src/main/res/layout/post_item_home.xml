@@ -84,24 +84,4 @@
         android:textColor="#006DFF"
         android:textSize="16sp" />
 
-    <ImageButton
-        android:id="@+id/delete"
-        android:layout_width="87dp"
-        android:layout_height="87dp"
-        android:layout_marginLeft="270dp"
-        android:layout_marginTop="120dp"
-        android:background="@color/white"
-        app:srcCompat="@mipmap/ic_launcher_deletee"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/edit"
-        android:layout_width="87dp"
-        android:layout_height="87dp"
-        android:layout_marginLeft="270dp"
-        android:layout_marginTop="50dp"
-        android:background="@color/white"
-        app:srcCompat="@mipmap/ic_launcher_edit"
-        tools:ignore="SpeakableTextPresentCheck" />
-
 </androidx.cardview.widget.CardView>

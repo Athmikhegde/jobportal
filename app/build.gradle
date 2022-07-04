@@ -46,9 +46,15 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage'
     implementation 'com.google.firebase:firebase-database:19.2.1'
     implementation 'com.google.firebase:firebase-database'
-
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
     implementation 'com.firebaseui:firebase-ui-database:7.2.0'
     implementation platform('com.google.firebase:firebase-bom:30.1.0')
+            //dialog puls for dialog box
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+
 }

@@ -2,6 +2,7 @@ package com.example.jobportal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -72,8 +73,7 @@ public class hirerMain extends AppCompatActivity {
             }
         });
 
-
-        adapter = new PostAdapter(options);
+        adapter = new PostAdapter(options,this);
         recyclerView.setAdapter(adapter);
     }
     @Override
@@ -86,4 +86,5 @@ public class hirerMain extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
+
 }

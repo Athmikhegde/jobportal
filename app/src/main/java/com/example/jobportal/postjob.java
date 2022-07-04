@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -84,6 +85,14 @@ public class postjob extends AppCompatActivity {
                     mlink.setError("Required Field...");
                     return;
                 }
+                if (Patterns.WEB_URL.matcher(jobLink.toString()).matches()) {
+                    Toast.makeText(postjob.this, "Pattern Matches", Toast.LENGTH_SHORT).show();
+                } else {
+
+                    mlink.setError("Invalid Url");
+                    return;
+                }
+
                 String id=mjobpost.push().getKey();
 
                 String date= DateFormat.getDateInstance().format(new Date());
