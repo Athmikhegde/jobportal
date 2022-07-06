@@ -29,12 +29,12 @@
         android:layout_alignStart="@id/imageView10"
         android:hint="Enter gender"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextdob3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintHorizontal_bias="0.312"
         app:layout_constraintStart_toEndOf="@+id/imageView25"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
+        app:layout_constraintVertical_bias="0.997" />
 
     <ImageView
         android:id="@+id/imageView13"
@@ -173,13 +173,13 @@
         android:id="@+id/editTextTextEmailAddress2"
         android:layout_width="252dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="392dp"
+        android:layout_marginBottom="4dp"
         android:ems="10"
         android:hint="Email:"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintHorizontal_bias="0.302"
         app:layout_constraintStart_toEndOf="@+id/imageView17"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
@@ -188,30 +188,27 @@
         android:layout_width="255dp"
         android:layout_height="48dp"
         android:layout_alignStart="@id/imageView10"
+        android:layout_marginBottom="8dp"
         android:hint="Enter Phone No"
         android:inputType="number"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextgender3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.337"
-        app:layout_constraintStart_toEndOf="@+id/imageView23"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
+        app:layout_constraintStart_toEndOf="@+id/imageView23" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
         android:layout_width="253dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="336dp"
         android:ems="10"
         android:hint="Password:"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextno3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.329"
         app:layout_constraintStart_toEndOf="@+id/imageView19"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.635" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <Button
         android:id="@+id/loginbtn4"
@@ -265,11 +262,11 @@
         android:ems="10"
         android:hint="Name:"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.355" />
+        app:layout_constraintVertical_bias="0.972" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

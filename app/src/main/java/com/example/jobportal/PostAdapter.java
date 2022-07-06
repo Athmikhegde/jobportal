@@ -168,35 +168,4 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Data, PostAdapter.MyVie
     }
 }
 
-        /*public void setJobTitle(String title) {
-            TextView mtitle = myview.findViewById(R.id.titletxt);
-            mtitle.setText(title);
-        }
-
-        public void setJobDate(String date) {
-            TextView mdate = myview.findViewById(R.id.datetxt);
-            mdate.setText(date);
-        }
-
-        public void setJobdesc(String desc) {
-            TextView mdesc = myview.findViewById(R.id.desctxt);
-            mdesc.setText(desc);
-        }
-
-        public void setJobskill(String skill) {
-            TextView mskill = myview.findViewById(R.id.skillstxt);
-            mskill.setText(skill);
-        }
-
-        public void setJobsalary(String salary) {
-            TextView msalary = myview.findViewById(R.id.salarystxt);
-            msalary.setText(salary);
-        }
-
-        public void setJoblink(String link) {
-            TextView mlink = myview.findViewById(R.id.linkstxt);
-            mlink.setText(link);
-        }
-    }
-}*/
 

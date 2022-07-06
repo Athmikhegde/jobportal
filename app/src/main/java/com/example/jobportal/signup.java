@@ -93,20 +93,7 @@ public class signup extends AppCompatActivity {
                 }
                 progress.setVisibility(View.VISIBLE);
                 registerUser(name,email,password,phone,gender,dob);
-                //firebase registration
-                /*mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                      if(task.isSuccessful()){
-                          Toast.makeText(signup.this, "Account Created", Toast.LENGTH_SHORT).show();
-                          finish();
-                          startActivity(new Intent(getApplicationContext(),fillprofile.class));
-                      }else{
-                          Toast.makeText(signup.this, "Error!!!"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                          progress.setVisibility(View.GONE);
-                      }
-                    }
-                });*/
+
             }
         });
 

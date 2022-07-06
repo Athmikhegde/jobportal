@@ -15,9 +15,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Jobportal">
         <activity
-            android:name=".uploadimg"
-            android:exported="false" />
-        <activity
             android:name=".hirerMain"
             android:exported="false" />
         <activity

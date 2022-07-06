@@ -27,13 +27,7 @@ public class profileMain extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             }
         });
-        /*profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(profileMain.this,profileMain.class);
-                startActivity(intent);
-            }
-        });*/
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

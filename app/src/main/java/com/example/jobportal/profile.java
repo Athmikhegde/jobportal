@@ -28,18 +28,20 @@ import com.google.firebase.storage.StorageReference;
 
 
 public class profile extends AppCompatActivity {
-    //private TextView xname, xemail, xno, xgender, xdob;
+
     private ImageView dp, home;
     private FirebaseAuth mauth;
     private FirebaseUser user;
     private String userID;
     private DatabaseReference reference;
     private FirebaseDatabase firebaseDatabase;
-    private ImageView dpbtn;
+    //private ImageView dpbtn;
     private Uri imageuri;
     private TextView uploadimg;
     private ProgressBar progress;
-    //private String mname,memail,mno,mgender,mdob;
+    StorageReference storageReference;
+    String url;
+
 
 
     @Override
@@ -47,14 +49,9 @@ public class profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         getSupportActionBar().hide();
-        dpbtn=findViewById(R.id.dpbtn);
-        //xname = findViewById(R.id.editTextName);
-        //xemail = findViewById(R.id.editTextemail);
-        //xno = findViewById(R.id.editTextno);
-        //xgender = findViewById(R.id.editTextgender);
-        //xdob = findViewById(R.id.editTextdob);
+        //dpbtn=findViewById(R.id.dpbtn);
 
-        uploadimg=findViewById(R.id.imageupld);
+        /*uploadimg=findViewById(R.id.imageupld);
         uploadimg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,7 +59,7 @@ public class profile extends AppCompatActivity {
                 startActivity(intent);
 
             }
-        });
+        });*/
         home = findViewById(R.id.homebuttton);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +69,7 @@ public class profile extends AppCompatActivity {
                 finish();
             }
         });
-        //mauth =FirebaseAuth.getInstance();
+
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("user details");
         userID = user.getUid();
@@ -118,83 +115,6 @@ public class profile extends AppCompatActivity {
     }
 }
 
-   /* private void showUserProfile(FirebaseUser firebaseUser) {
-        String uId=firebaseUser.getUid();
-
-        DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("user details");
-        referenceProfile.child(uId).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                readWriteUserDetails readUserDetails= snapshot.getValue(readWriteUserDetails.class);
-                if(readUserDetails!=null){
-                    mname=readUserDetails.name;
-                    memail=readUserDetails.email;
-                    mdob=readUserDetails.dob;
-                    mgender=readUserDetails.gender;
-                    mno=readUserDetails.phone;
-
-                    xname.setText(mname);
-                    xemail.setText(memail);
-                    xdob.setText(mdob);
-                    xgender.setText(mgender);
-                    xno.setText(mno);
-
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(profile.this,"somethis went wrong",Toast.LENGTH_SHORT).show();
-
-            }
-        });
-*/
-
-
-
-    /*private void UploadFiles(Uri data) {
-        final ProgressDialog progressDialog=new ProgressDialog(this);
-        progressDialog.setTitle("Uploading....");
-        progressDialog.show();
-
-        StorageReference reference = storageReference.child("uploadPDF"+System.currentTimeMillis()+".pdf");
-        reference.putFile(data)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        Task<Uri>uriTask=taskSnapshot.getStorage().getDownloadUrl();
-                        while(!uriTask.isComplete());
-                        Uri uri=uriTask.getResult();
-
-                        putPDF putPDF =new putPDF(name.getText().toString(),uri.toString());
-                        databaseReference.child(databaseReference.push().getKey()).setValue(putPDF);
-
-
-                        Toast.makeText(fillprofile.this,"File Uploaded!!",Toast.LENGTH_SHORT);
-
-                        progressDialog.dismiss();;
-                    }
-                }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-                        double progress=(100.0*snapshot.getBytesTransferred())/snapshot.getTotalByteCount();
-                        progressDialog.setMessage("uploaded:"+(int)progress+"%");
-
-                    }
-                });*/
-
-
-
-
-
-
-    /*private void selectFiles() {
-        Intent intent =new Intent();
-        intent.setType("application/pdf");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent,"Select PDF Files..."),1);
-    }*/
 
 
 
