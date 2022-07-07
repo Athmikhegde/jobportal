@@ -32,7 +32,6 @@ public class loginpage extends AppCompatActivity {
     private EditText nPassword;
     private Button login;
     TextView forgettext;
-    //CheckBox remember;
 
     ProgressBar progress;
     FirebaseAuth mAuth;
