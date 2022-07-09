@@ -32,7 +32,6 @@ public class loginpage extends AppCompatActivity {
     private EditText nPassword;
     private Button login;
     TextView forgettext;
-    //CheckBox remember;
 
     ProgressBar progress;
     FirebaseAuth mAuth;
@@ -48,25 +47,15 @@ public class loginpage extends AppCompatActivity {
         nPassword = findViewById(R.id.editTextTextPassword);
         login = findViewById(R.id.loginbtn2);
         progress=findViewById(R.id.progressBar);
-        //remember=findViewById(R.id.checkBox);
         forgettext=findViewById(R.id.forgetpasstext);
 
-        //remember me
-        /*SharedPreferences preferences =getSharedPreferences("checked",MODE_PRIVATE);
-        String checkbox=preferences.getString("remember","");
-        if(checkbox.equals("true")){
-            Intent intent = new Intent(loginpage.this,homeactivity.class);
-            startActivity(intent);
-        }else if(checkbox.equals("false"))
-        {
-            Toast.makeText(this,"please Sigin in",Toast.LENGTH_SHORT).show();
-        }*/
 
         mAuth=FirebaseAuth.getInstance();
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String email=nEmail.getText().toString().trim();
                 String password=nPassword.getText().toString().trim();
                 if(TextUtils.isEmpty(password)){
@@ -86,6 +75,7 @@ public class loginpage extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(loginpage.this, "Login successfull", Toast.LENGTH_SHORT).show();
+                            finish();
                             startActivity(new Intent(getApplicationContext(),UserselectionActivity.class));
                         }else {
                             Toast.makeText(loginpage.this, "Wrong Details!!!"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -93,7 +83,9 @@ public class loginpage extends AppCompatActivity {
                         }
                     }
                 });
+
             }
+
         });
 
         signup = findViewById(R.id.signupbtn2);
@@ -104,29 +96,8 @@ public class loginpage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //remember me funtion
-        /*
-        remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(compoundButton.isChecked()){
-                    SharedPreferences preferences =getSharedPreferences("checkbox",MODE_PRIVATE);
-                    SharedPreferences.Editor editor=preferences.edit();
-                    editor.putString("remember","true");
-                    editor.apply();
-                    Toast.makeText(loginpage.this,"Checked",Toast.LENGTH_SHORT).show();
 
-                }else if (!compoundButton.isChecked()){
-                    SharedPreferences preferences =getSharedPreferences("checkbox",MODE_PRIVATE);
-                    SharedPreferences.Editor editor=preferences.edit();
-                    editor.putString("remember","false");
-                    editor.apply();
-                    Toast.makeText(loginpage.this,"Unchecked",Toast.LENGTH_SHORT).show();
-                }
 
-            }
-        });
-*/
         //forget pass
         forgettext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,7 +112,7 @@ public class loginpage extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //extrating the email and sending reset button
-                        String mail= resetmail.getText().toString();
+                        String mail= resetmail.getText().toString().trim();
                         mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {

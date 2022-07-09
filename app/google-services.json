@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "188375522602",
+    "firebase_url": "https://jobportal-ce0df-default-rtdb.firebaseio.com",
     "project_id": "jobportal-ce0df",
     "storage_bucket": "jobportal-ce0df.appspot.com"
   },
